@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>BizSite Builders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        #seo {
+            opacity: 0;
+            height: 0;
+        }
+
+        #marketing{
+            opacity: 0;
+            height: 0;
+        }
+
+        #web-building{
+            opacity: 1;
+            height: auto;
+        }
+
+        #web-dot{
+            display: block;
+        }
+
+        #seo-dot{
+            display: none;
+        }
+
+        #market-dot{
+            display: none;
+        }
+
+        #web-card{
+            outline: 3px solid #0177a3;
+        }
+
+        #SEO-Card{
+            outline: none;
+        }
+
+        #market-card{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar">
+                <a href="index.html" class="nav-branding"><img src="resources/images/logo.png"></a>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link active">Services</a>
+                    </li>
+                </ul>
+
+                <a href="contact.html" class="button-1" type="contact-button">Contact us</a>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+            </nav>
+        </header>
+        <section class="service-hero">
+            <div class="service-hero-left">
+                <h1>
+                    Elevate Your Brand, Expand Your Reach
+                </h1>
+                <p>
+                    Our array of services, from expertly handcrafted websites to strategic SEO and dynamic marketing campaigns, are geared towards propelling your brand to new heights.
+                </p>
+                <button class="service-button">
+                    Learn More
+                </button>
+            </div>
+            
+            <div class="service-hero-right">
+                
+                <img src="resources/character/Page 1.png" alt="">
+            </div>
+            
+        </section>
+        <section class="services">
+            <div class="service-text">
+                <h2>
+                    What we offer.
+                </h2>
+                <p>
+                    Discover our range of services designed to elevate your online presence and business growth.</br></br> Click on each card to learn more about the specific offerings.
+                </p>
+            </div>
+            <div class="service-card-wrap" id="card-wrapper">
+                <div class="service-card" onclick="webBuild()" id="web-card">
+                    <img src="resources/images/web-builder.svg" alt="">
+                    <h2>
+                        Web Building
+                    </h2>
+                    <p id="web-dot">
+                        \/
+                    </p>
+                </div>
+                <div class="service-card" onclick="SEO()" id="SEO-Card">
+                    <img src="resources/images/seo.svg" alt="">
+                    <h2>
+                        Search Engine Optimization
+                    </h2>
+                    <p id="seo-dot">
+                        2
+                    </p>
+                </div>
+                <div class="service-card" onclick="Marketing()" id="market-card">
+                    <img src="resources/images/marketing.svg" alt="">
+                    <h2>
+                        Marketing
+                    </h2>
+                    <p id="market-dot">
+                        3
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="web-building" id="web-building">
+            <div class="web-build-text">
+                <h2>
+                    <span class="focus">Captivating Digital Spaces</span>
+                </h2>
+                <h1>
+                    Web Building
+                </h1>
+                <p>
+                    Our Web Building services are meticulously designed to provide a strong foundation for your online presence.
+                </p>
+            </div>
+            <div class="web-card-wrap">
+                <div class="web-card">
+                    <div class="card-left">
+                        <img src="resources/images/image_preview.jpeg" alt="">
+                    </div>
+                    <div class="card-right">
+                        <h4>
+                            5 Pages Designed for Success
+                        </h4>
+
+                        <ul>
+                            <li>
+                                <span class="bold">Home:</span> Make a memorable first impression
+                            </li>
+                            <li><span class="bold">About:</span> Showcase your story and values</li>
+                            <li><span class="bold">Services:</span> Highlight your offerings with clarity</li>
+                            <li><span class="bold">Portfolio:</span> Display your best work and accomplishments</li>
+                            <li><span class="bold">Contact:</span> Enable seamless communication with your audience</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="web-card mid">
+                    <div class="card-left-txt">
+                    <h4>
+                        Hand-Coded Websites
+                    </h4>
+                    <ul>
+                        <li><span class="bold">Optimized Performance:</span> Hand coding allows us to streamline the website, resulting in faster loading times.</li><br>
+                        <li><span class="bold">Customization:</span> Tailor every aspect to match your brand identity precisely.</li><br>
+                        <li><span class="bold">SEO Advantage:</span> Clean code contributes to better search engine rankings, ensuring your website is easily discoverable.</li>
+                    </ul>
+                    </div>
+                    <div class="card-right">
+                        <img src="resources/images/image_preview.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="web-card">
+                    <div class="card-left">
+                        <img src="resources/images/image_preview.jpeg" alt="">
+                    </div>
+                    <div class="card-right">
+                    <h4>
+                        Hosting and Lifetime Updates Included
+                    </h4>
+                    <ul>
+                        <li><span class="bold">Worry-Free Hosting:</span> We take care of the technicalities. Your website will be hosted on reliable servers, ensuring it's always accessible to your audience.</li><br>
+                        <li><span class="bold">Lifetime Updates:</span> Stay ahead in the digital landscape. We provide ongoing updates to keep your website secure, efficient, and in line with the latest trends.</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="seo" id="seo">
+            <div class="web-build-text">
+                <h2>
+                    <span class="focus">Boost your Visibility, Elevate Your Reach</span>
+                </h2>
+                <h1>
+                    Search Engine Optimization (SEO)
+                </h1>
+                
+                <p>
+                    Our SEO services are designed to catapult your online presence, ensuring your business gets the attention it deserves.    
+                </p>
+            </div>
+            <div class="web-card-wrap">
+                <div class="web-card">
+                    <div class="card-left">
+                        <img src="resources/images/image_preview.jpeg" alt="">
+                    </div>
+                    <div class="card-right">
+                        <h4>
+                            Standard SEO Strategy
+                        </h4>
+                        <ul>
+                            <li>
+                                <span class="bold">Keyword Optimization:</span> We meticulously research and incorporate relevant keywords to enhance your website's visibility on search engines.
+                            </li><br>
+                            <li><span class="bold">On-Page SEO:</span> From meta tags to header structures, we optimize every element on your pages to align with search engine algorithms.</li><br>
+                            <li><span class="bold">Quality Content Creation:</span> Engaging, informative, and keyword-rich content is at the core of our strategy, ensuring your website stands out in search results.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="web-card mid">
+                    <div class="card-left-txt">
+                        <h4>
+                            Monthly Blog Posts
+                        </h4>
+                        <ul>
+                            <li><span class="bold">Content Calendar:</span> We curate a content calendar aligned with your industry trends and audience interests.</li><br>
+                            <li><span class="bold">Keyword-Optimized Posts:</span> Each blog post is crafted with SEO in mind, incorporating strategic keywords to enhance discoverability.</li><br>
+                            <li><span class="bold">Engaging Topics:</span> We delve into topics that resonate with your audience, positioning your business as an authority in your domain.</li>
+                        </ul>
+                    </div>
+                        <div class="card-right">
+                            <img src="resources/images/image_preview.jpeg" alt="">
+                        </div>
+                </div>
+                <div class="web-card">
+                    <div class="card-left">
+                        <img src="resources/images/image_preview.jpeg" alt="">
+                    </div>
+                    <div class="card-right">
+                        <h4>
+                            Analytics and Reporting
+                        </h4>
+                        <ul>
+                            <li><span class="bold">Data-Driven Insights:</span> We leverage analytics tools to track website performance, user behavior, and other key metrics.</li><br>
+                            <li><span class="bold">Custom Reports:</span> Receive regular, easy-to-understand reports that highlight the effectiveness of our SEO strategies.</li><br>
+                            <li><span class="bold">Performance Adjustments:</span> Based on the insights gained, we continuously refine our approach to ensure optimal results.</li>
+                        </ul>
+                    </div>    
+                </div>
+            </div>
+        </section>
+        <section class="marketing" id="marketing">
+            <div class="web-build-text">
+                <h2>
+                    <span class="focus">Elevate Your Brand, Expand Your Reach</span>
+                </h2>
+                <h1>
+                    Digital Marketing Mastery
+                </h1>
+                
+                <p>
+                    Our digital marketing services are a powerhouse of strategies aimed at putting your brand on the digital map.    
+                </p>
+            </div>
+            <div class="web-card-wrap">
+                <div class="web-card">
+                    <div class="card-left">
+                        <img src="resources/images/image_preview.jpeg" alt="">
+                    </div>
+                    <div class="card-right">
+                        <h4>
+                            SEO Strategy
+                        </h4>
+                        <ul>
+                            <li><span class="bold">
+                                Comprehensive Keyword Analysis:
+                                </span>
+                                 We delve deep into your industry to identify high-impact keywords, ensuring your content aligns with search intent.
+                            </li><br>
+                            <li><span class="bold">
+                                Technical SEO Optimization:</span>
+                                 From website structure to backend optimization, we cover the technical aspects that boost your site's visibility.</li><br>
+                            <li><span class="bold">
+                                Content Tailored for SEO:</span>
+                                 Engaging, shareable, and SEO-optimized content is at the heart of our strategy, ensuring your message reaches the right audience.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="web-card mid">
+                    <div class="card-left-txt">
+                        <h4>
+                            PPC Campaign Setup
+                        </h4>
+                        <ul>
+                            <li><span class="bold">
+                                Strategic Keyword Selection:</span>
+                                 We identify the keywords that matter most to your business, optimizing your ads for maximum impact.</li><br>
+                            <li><span class="bold">
+                                Ad Copy that Converts:</span>
+                                 Our copywriting experts create compelling ad content that not only attracts clicks but also converts visitors into customers.</li><br>
+                            <li><span class="bold">
+                                Budget Optimization:</span>
+                                 We fine-tune your PPC budget to maximize ROI, ensuring you get the most value from every advertising dollar.</li>
+                        </ul>
+                    </div>
+                    <div class="card-right">
+                        <img src="resources/images/image_preview.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="web-card">
+                    <div class="card-left">
+                        <img src="resources/images/image_preview.jpeg" alt="">
+                    </div>
+                    <div class="card-right">
+                        <h4>
+                            A/B Testing of Copy and Landing Pages
+                        </h4>
+                        <ul>
+                            <li><span class="bold">
+                                Copy Testing:</span>
+                                 Discover the messaging that resonates best with your audience through systematic A/B testing of ad copy.</li><br>
+                            <li><span class="bold">
+                                Landing Page Optimization:</span>
+                                 We evaluate different landing page designs to identify the layout and content that drives the highest conversions.</li><br>
+                            <li><span class="bold">
+                                Continuous Improvement:</span>
+                                 Based on real-time data, we make informed decisions to continuously optimize your marketing materials for peak performance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="footer">                    
+                <div class="foot-nav">
+                    <div class="foot-column">
+                        <a href="index.html" class="foot-branding"><img src="resources/images/logo-white.png"></a>
+                    </div>
+                    <div class="foot-column">
+                        <h1 class="nav-head">Navigation</h1>
+                        <div class="foot-links">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About</a>
+                            <a href="index.html#portfolio">Portfolio</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                    <div class="foot-column">
+                        <h1 class="nav-head">Services</h1>
+                        <div class="foot-links">   
+                            <a href="">Web Design</a>
+                            <a href="">Website Maintenance</a>
+                            <a href="">SEO Services</a>
+                            <a href="">Email Marketing</a>
+                            <a href="">PPC Campaigns</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+            </section>
+            <div class="copyright">
+            <p>Copyright © 2024 | BizSite Builders | All Rights Reserved</p>
+            </div>
+            <script>
+                function webBuild() {
+                    document.getElementById("web-building").style.opacity = "1";
+                    document.getElementById("web-building").style.height = "auto";
+                    document.getElementById("seo").style.opacity = "0";
+                    document.getElementById("seo").style.height = "0";
+                    document.getElementById("marketing").style.opacity = "0";
+                    document.getElementById("marketing").style.height = "0";
+                    document.getElementById("card-wrapper").scroll(0, 0);
+                    document.getElementById("seo-dot").style.display = "none";
+                    document.getElementById("market-dot").style.display = "none";
+                    document.getElementById("web-dot").style.display = "block";
+                    document.getElementById("web-card").style.outline = "3px solid #0177a3";
+                    document.getElementById("SEO-Card").style.outline = "none";
+                    document.getElementById("market-card").style.outline = "none";
+                }
+            </script>
+            <script>
+                function SEO() {
+                    document.getElementById("web-building").style.opacity = "0";
+                    document.getElementById("web-building").style.height = "0";
+                    document.getElementById("seo").style.opacity = "1";
+                    document.getElementById("seo").style.height = "auto";
+                    document.getElementById("marketing").style.opacity = "0";
+                    document.getElementById("marketing").style.height = "0";
+                    document.getElementById("card-wrapper").scroll(250, 0);
+                    document.getElementById("seo-dot").style.display = "block";
+                    document.getElementById("market-dot").style.display = "none";
+                    document.getElementById("web-dot").style.display = "none";
+                    document.getElementById("web-card").style.outline = "none";
+                    document.getElementById("SEO-Card").style.outline = "3px solid #0177a3";
+                    document.getElementById("market-card").style.outline = "none";
+                    
+                }
+            </script>
+            <script>
+                function Marketing() {
+                    document.getElementById("web-building").style.opacity = "0";
+                    document.getElementById("web-building").style.height = "0";
+                    document.getElementById("seo").style.opacity = "0";
+                    document.getElementById("seo").style.height = "0";
+                    document.getElementById("marketing").style.opacity = "1";
+                    document.getElementById("marketing").style.height = "auto";
+                    document.getElementById("card-wrapper").scroll(500, 0);
+                    document.getElementById("seo-dot").style.display = "none";
+                    document.getElementById("market-dot").style.display = "block";
+                    document.getElementById("web-dot").style.display = "none";
+                    document.getElementById("web-card").style.outline = "none";
+                    document.getElementById("SEO-Card").style.outline = "none";
+                    document.getElementById("market-card").style.outline = "3px solid #0177a3";
+                }
+            </script>
+            
+            <script src="script.js"></script>
+        </div>
+    </body>
+    </html>

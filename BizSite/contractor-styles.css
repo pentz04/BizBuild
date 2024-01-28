@@ -1,0 +1,680 @@
+:root {
+    --primary-color: #002d3c;
+    --primary-light: #0177a3;
+    --primary-dark: #005055;
+    --secondary-color: #9ac013;
+    --secondary-light: #c6dd45;
+    --secondary-dark: #78a605;
+    --auxiliary-color: #b7ccd3;
+}
+
+html{
+    scroll-behavior:smooth;
+    overflow-x:hidden!important;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 1.25rem;
+    box-sizing: border-box;
+    background-color: white;
+    overflow-x: hidden!important;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+header{
+    background-color: white;
+    margin: -30px 0;
+}
+
+.wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+/* #region Nav Bar */
+
+.nav-info{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+
+    top: 0;
+    left: 27%;
+    margin-top: -10px;
+}
+
+.info{
+    width: 250px;
+    font-size: 1rem;
+    text-align: center;
+    color: #14005A;
+}
+
+.info h3{
+    margin-bottom: -20px;
+}
+
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    background-color: #14005A;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: -60px;
+
+    
+    z-index: 10;
+}
+
+.nav-branding img{
+    height: 100px;
+    margin-top: 5px;
+    padding-left: 35px;
+}
+
+.nav-link{
+    transition: 0.5s ease;
+    padding: 7px 20px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.nav-link.active{
+    outline: white 1px solid;
+}
+
+.nav-link:hover{
+    outline: white 1px solid;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--primary-color);
+}
+
+.button-1{
+    display: block;
+    font-size: 1.25rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 12px 20px;
+    background-color: #14005A;
+    color: white;
+    transition: all 600ms ease;
+}
+
+
+
+.button-1:hover{
+    inset: 6px 0 5.5px 0;
+    transform: rotateX(5deg) rotateY(3deg) rotateZ(.25deg);
+    box-shadow: none;
+}
+
+@media(max-width:1250px){
+    .nav-info{
+        display: none;
+    }
+}
+
+@media(max-width:1189px){
+
+    
+
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: absolute;
+        right: -100%;
+        top: 80px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgb(242, 242, 242);
+        width: 45%;
+        text-align: right;
+        font-size: 1.15rem;
+        transition: 0.3s;
+        box-shadow: -5px 5px 10px 1px rgb(209, 209, 209, 50%);
+        z-index: 20;
+        overflow-x: hidden;
+    }
+
+    header{
+        overflow-x: hidden;
+    }
+
+    .navbar a{
+        color: black;
+        font-size: 1.5rem;
+    }
+
+    .nav-link:hover{
+        transition: 0s;
+        border-right: var(--primary-dark) 3.5px solid;
+        background-color: rgb(242, 242, 242);
+        outline: none;
+    }
+
+    .nav-link{
+        padding: 2px 7px;
+        border-radius: 0;
+    }
+
+    .nav-link.active{
+        background-color: rgb(242, 242, 242);
+        border-right: var(--primary-dark) 3.5px solid;
+        outline: none;
+    }
+
+    .nav-item{
+        margin: 24px 0 24px 30px;
+    }
+
+    .nav-item:last-child{
+        margin-bottom: 820px;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .button-1{
+        display: none;
+    }
+
+    .nav-branding img{
+        padding-left: 5px;
+    }
+    
+}
+
+/* #endregion */
+
+/* #region Footer*/
+
+.footer{
+    height: fit-content;
+    background-color: #1f1f1f;
+    width: 100%;
+    padding: 50px 0;
+}
+
+
+.foot-nav img{
+    height: 150px;
+    float: left;
+}
+
+.foot-nav {
+    margin: 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.foot-column{
+    padding-right: min(25%, 150px);
+}
+
+.foot-column:first-child{
+    padding-left: 10%;
+    float: inline-start;
+}
+
+
+
+.foot-links{
+    display: flex;
+    flex-direction: column;
+}
+
+.foot-nav a{
+    text-align: left;
+    font-size: large;
+    padding: 0 5px 5px 5px;
+    max-width: fit-content;
+    color: white;
+}
+
+.foot-nav a:hover{
+    color: var(--primary-color);
+}
+
+.nav-head{
+    color: white;
+    border-bottom: var(--primary-light) solid;
+    max-width: 200px;
+}
+
+@media(max-width:1295px){
+    .foot-column:first-child{
+        padding-right: 500px;
+        
+    }
+}
+
+@media(max-width:725px){
+    .foot-column:first-child{
+        padding-right: 100px;
+    }
+
+    .foot-column:nth-child(2){
+        padding-left: 0px;
+    }
+
+    .foot-column{
+        padding-right: 20px;
+    }
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    background-color: #ededed;
+}
+
+/* #endregion */
+
+/* #region Hero */
+
+.hero{
+    position: relative;
+    background-image: url(./images/roofer-workers-installing-new-roof.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 35% 35%;
+    box-shadow: inset 0 0 0 1000px rgba(0, 59, 141, 0.6);
+    height: 500px;
+
+    color: white;
+    justify-content: center;
+    align-content: center;
+    border-bottom: 4px solid rgba(214, 214, 214);
+}
+
+.hero-con{
+    min-width: 300px;
+    width: 30%;
+    padding-top: 75px;
+    margin-left: 20%;
+}
+
+.hero-con h1{
+    font-size: 2.5rem;
+    margin-bottom: -15px;
+}
+
+.hero button{
+    font-size: 1.25rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 12px 20px;
+    background-color: transparent;
+    color: white;
+    transition: all 600ms ease;
+}
+
+
+/* #region Divider */
+
+.custom-shape-divider-bottom-1704898851 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1704898851 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 120px;
+}
+
+.custom-shape-divider-bottom-1704898851 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.custom-shape-divider-bottom-1704898926 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1704898926 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 134px;
+}
+
+.custom-shape-divider-bottom-1704898926 .shape-fill {
+    fill: #14005A;
+}
+/* #endregion */
+
+/* #endregion */
+
+/* #region Services */
+
+.services{
+    display: flex;
+    width: 650px;
+    margin: 25px auto;
+    justify-content: center;
+    gap: 150px;
+
+}
+
+@media(max-width: 1250px){
+    .services{
+        flex-wrap: wrap;
+    }
+}
+
+.service-left img{
+    border-radius: 15px;
+}
+
+.service-right h2{
+    width: 350px;
+    color: #14005A;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.service-right h3{
+    font-size: 1.25rem;
+    color: #14005A;
+}
+
+.service-right p{
+    font-size: 1.1rem;
+    margin-top: -15px;
+}
+
+.services button{
+    font-size: 1.25rem;
+    border: 2px solid #14005A;
+    border-radius: 5px;
+    padding: 12px 20px;
+    margin-top: 20px;
+    background-color: #14005A;
+    color: white;
+    transition: all 600ms ease;
+    width: 60%;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+@media(max-width:1200px){
+    .services{
+        width: 390px;
+    }
+
+    .service-left{
+        margin-bottom: -125px;
+    }
+
+    .service-right{
+        margin: 0px 25px;
+    }
+}
+
+
+/* #endregion */
+
+/* #region Industries*/
+
+.industries{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    height: 825px;
+
+    background-image: url(../images/job-site.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 35% 35%;
+    box-shadow: inset 0 0 0 1000px rgba(0, 59, 141, 0.75);
+}
+
+.industry-top{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 90px;
+
+    font-size: 1.75rem;
+}
+
+.button-2{
+    font-size: 1.25rem;
+    border: 1px solid #14005A;
+    border-radius: 5px;
+    padding: 20px 20px;
+    background-color: white;
+    color: #14005A;
+    transition: all 600ms ease;
+    width: 40%;
+    margin-left: 30%;
+}
+
+.button-2:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.industry-wrap{
+    display: flex;
+    margin: 0 auto;
+    gap: 25px;
+
+}
+
+.industry-card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    width: 250px;
+    height: 500px;
+    background: #14005A;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+
+.card-icon{
+    font-variation-settings: 
+    'FILL' 0,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+.industry img{
+    height: 75px;
+    fill: white;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    padding: 10px;
+
+    margin-top: 50px;
+}
+
+.industry-card:hover{
+    transform: scale(1.1);
+}
+
+@media(max-width:1250px){
+    .industries{
+        overflow-x: scroll;
+    }
+
+    .industry-top{
+        top: 55%;
+        left: 25%;
+        position: absolute;
+        
+    }
+
+    .button-2{
+        width: 250px;
+        margin: 0px 0px 20px 15px;
+    }
+
+    .industry-wrap{
+        margin-top: 200px;
+        padding-left: 50px;
+    }
+
+    .industry-card:hover{
+        transform: none;
+    }
+
+
+}
+
+@media(max-width:729px){
+    .industry-top{
+        left: 5%;
+    }
+}
+
+/* #endregion */
+
+/* #region Team*/
+
+.team{
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.team-intro{
+    margin: 0 auto;
+}
+
+.team-members{
+    display: flex;
+    margin: 15px auto;
+    gap: 125px;
+    
+    padding: 15px 15px;
+}
+
+.member{
+    height: 400px;
+    text-align: center;
+
+    border: 10px white solid;
+    box-shadow: 0px 0px 8px black;
+}
+
+.text{
+    background-color: #14005A;
+    color: white;
+    margin-top: -35px;
+    height: 100px;
+}
+
+.text p{
+    font-size: .75rem;
+}
+
+.text h5{
+    padding-top: 35px;
+}
+
+.member img{
+    height: 300px;
+}
+
+@media (max-width:1250px) {
+    .team-intro{
+        position: absolute;
+        left: 40%;
+    }
+
+    .team-members{
+        margin: 75px auto;
+        padding-left: 75px;
+    }
+}
+
+@media (max-width:500px) {
+    .team-intro{
+        position: absolute;
+        left: 25%;
+    }
+
+}
+
+/* #endregion */
