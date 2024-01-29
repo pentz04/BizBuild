@@ -8,6 +8,56 @@
     --auxiliary-color: #b7ccd3;
 }
 
+/* kalnia-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Kalnia';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../resources/fonts/kalnia-v2-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* kalnia-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Kalnia';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../resources/fonts/kalnia-v2-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* kalnia-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Kalnia';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../resources/fonts/kalnia-v2-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* kalnia-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Kalnia';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../resources/fonts/kalnia-v2-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* unna-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Unna';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../resources/fonts/unna-v23-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* unna-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Unna';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../resources/fonts/unna-v23-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
 html{
     scroll-behavior:smooth;
     overflow-x:hidden!important;
@@ -522,7 +572,7 @@ header{
     max-width: 400px;
 }
 
-.site-desc h4{
+.site-desc h3{
     border-radius: 25px;
     text-align: center;
     width: 130px;
@@ -545,7 +595,7 @@ header{
     max-width: 400px;
 }
 
-.site-desc-mid h4{
+.site-desc-mid h3{
     background-color: #66a3ef;
     border-radius: 25px;
     text-align: center;
@@ -625,7 +675,7 @@ header{
     z-index: 1;
 }
 
-.price-card:nth-child(2) h4{
+.price-card:nth-child(2) h3{
     background-color: var(--secondary-light);
     border-radius: 5px 5px 0px 0px;
 }
@@ -643,7 +693,7 @@ header{
     font-size: 5rem;
 }
 
-.price-card h3{
+.price-card h4{
     color: #0177a3;
 }
 
@@ -651,7 +701,7 @@ header{
     font-size: 4rem;
 }
 
-.price-card h4{
+.price-card h3{
     color: black;
     border-bottom: 1px solid rgb(141, 141, 141, .5);
     margin: 0px;
