@@ -40,7 +40,7 @@ header{
 
 .focus{
     font-style: italic;
-    color: var(--secondary-dark);
+    color: #3E5705;
 }
 
 .focus-2{
