@@ -1,12 +1,4 @@
-:root {
-    --primary-color: #002d3c;
-    --primary-light: #0177a3;
-    --primary-dark: #005055;
-    --secondary-color: #9ac013;
-    --secondary-light: #c6dd45;
-    --secondary-dark: #78a605;
-    --auxiliary-color: #b7ccd3;
-}
+/* #region FONTS */
 
 /* kalnia-regular - latin */
 @font-face {
@@ -58,6 +50,20 @@
     src: url('../resources/fonts/unna-v23-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
+
+/* #endregion */
+
+:root {
+    --primary-color: #002d3c;
+    --primary-light: #0177a3;
+    --primary-dark: #005055;
+    --secondary-color: #9ac013;
+    --secondary-light: #c6dd45;
+    --secondary-dark: #78a605;
+    --auxiliary-color: #b7ccd3;
+    --background-color: #FFF4E2;
+}
+
 html{
     scroll-behavior:smooth;
     overflow-x:hidden!important;
@@ -70,7 +76,7 @@ body {
     font-family: 'Unna', sans-serif;
     font-size: 1.25rem;
     box-sizing: border-box;
-    background-color: #FFF4E2;
+    background-color: var(--background-color);
     overflow-x: hidden!important;
     width: 100%;
 }
@@ -85,7 +91,7 @@ li {
 }
 
 header{
-    background-color: #FFF4E2;
+    background-color: var(--background-color);
 }
 
 .focus{
@@ -617,6 +623,7 @@ header{
     box-shadow: #c8ef66 9px 9px;
     margin-top: 50px;
     margin-left: -15px;
+    width: 400px;
 }
 .third{
     background-color: #f9e947;
